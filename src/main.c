@@ -4,7 +4,7 @@
 
 int main()  
 {  
-	srand(time(NULL)); // Seed the random number generator   
+	srand(time(NULL));
 	play_game();  
 	return 0;  
 }

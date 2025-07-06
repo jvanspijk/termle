@@ -108,6 +108,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -125,6 +126,7 @@
       <Optimization>MinSpace</Optimization>
       <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
       <LanguageStandard_C>stdc11</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -134,25 +136,25 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="common.c" />
-    <ClCompile Include="console_view.c" />
-    <ClCompile Include="dictionary.c" />
-    <ClCompile Include="game_loop.c" />
-    <ClCompile Include="game_state.c" />
-    <ClCompile Include="main.c" />
+    <ClCompile Include="src/common.c" />
+    <ClCompile Include="src/console_view.c" />
+    <ClCompile Include="src/dictionary.c" />
+    <ClCompile Include="src/game_loop.c" />
+    <ClCompile Include="src/game_state.c" />
+    <ClCompile Include="src/main.c" />
   </ItemGroup>
   <ItemGroup>
-    <Text Include="answer_words_EN_5.txt" />
-    <Text Include="guessable_words_EN_5.txt" />
+    <Text Include="Data/answer_words_EN_5.txt" />
+    <Text Include="Data/guessable_words_EN_5.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="answer_words_EN_5.h" />
-    <ClInclude Include="common.h" />
-    <ClInclude Include="console_view.h" />
-    <ClInclude Include="dictionary.h" />
-    <ClInclude Include="game_loop.h" />
-    <ClInclude Include="game_state.h" />
-    <ClInclude Include="guessable_words_EN_5.h" />
+    <ClInclude Include="include/answer_words_EN_5.h" />
+    <ClInclude Include="include/common.h" />
+    <ClInclude Include="include/console_view.h" />
+    <ClInclude Include="include/dictionary.h" />
+    <ClInclude Include="include/game_loop.h" />
+    <ClInclude Include="include/game_state.h" />
+    <ClInclude Include="include/guessable_words_EN_5.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

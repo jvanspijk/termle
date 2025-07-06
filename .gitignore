@@ -56,3 +56,5 @@ dkms.conf
 /Termle/.vs
 /x64
 /Data
+/.vs
+/Termle/x64
