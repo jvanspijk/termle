@@ -1,0 +1,17 @@
+total program: 92 kb
+total amount words: 2315 + 10658 = 12973
+bits / word old: 40 (8 * 5) = 12973 * 40 = 428635 (52.3 kB)
+bits / word simple: 25 (5 * 5) = 12973 * 25 = 268765 (32.9 kB)
+bits / word dif: 21 (4* 5 + 1) = 226133 + 4 = 226137 (27.6 kB)
+
+total program after compression: 67.3 kB
+
+---
+
+00000 00001 00000 00010 01010
+
+00000 00001 00000 10010 00100
+
+0     0     0     1     1
+
+

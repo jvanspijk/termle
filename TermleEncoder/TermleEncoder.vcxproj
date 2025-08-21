@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{f37a10d1-ad79-461b-afb4-4c433fa7ff97}</ProjectGuid>
-    <RootNamespace>Termle</RootNamespace>
+    <ProjectGuid>{d354bbb3-3e72-42aa-a623-4eeec5e98ce3}</ProjectGuid>
+    <RootNamespace>TermleEncoder</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -70,9 +70,6 @@
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup Label="Vcpkg">
-    <VcpkgEnabled>false</VcpkgEnabled>
-  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
@@ -93,14 +90,9 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <Optimization>MinSpace</Optimization>
-      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
@@ -110,8 +102,6 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -126,38 +116,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <Optimization>MinSpace</Optimization>
-      <FavorSizeOrSpeed>Size</FavorSizeOrSpeed>
-      <LanguageStandard_C>stdc11</LanguageStandard_C>
-      <AdditionalIncludeDirectories>$(ProjectDir)include;</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="src/common.c" />
-    <ClCompile Include="src/console_view.c" />
-    <ClCompile Include="src/dictionary.c" />
-    <ClCompile Include="src/game_loop.c" />
-    <ClCompile Include="src/game_state.c" />
-    <ClCompile Include="src/main.c" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="Data/answer_words_EN_5.txt" />
-    <Text Include="Data/guessable_words_EN_5.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="include/answer_words_EN_5.h" />
-    <ClInclude Include="include/common.h" />
-    <ClInclude Include="include/console_view.h" />
-    <ClInclude Include="include/dictionary.h" />
-    <ClInclude Include="include/game_loop.h" />
-    <ClInclude Include="include/game_state.h" />
-    <ClInclude Include="include/guessable_words_EN_5.h" />
+    <ClCompile Include="TermleEncoder.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -58,3 +58,6 @@ dkms.conf
 /Data
 /.vs
 /Termle/x64
+/Termle/Release
+/TermleEncoder/Release
+/TermleEncoder/x64
